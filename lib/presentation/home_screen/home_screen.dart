@@ -22,9 +22,9 @@ class HomeScreen extends StatelessWidget {
 
   static Widget builder(BuildContext context) {
     return BlocProvider<HomeBloc>(
-      create: (context) => HomeBloc(HomeState(homeModelObj: HomeModel()))
-        ..add(HomeInitialEvent()),
-      child: HomeScreen(),
+      create: (context) => HomeBloc(const HomeState(homeModelObj: HomeModel()))
+        ..add(const HomeInitialEvent()),
+      child: const HomeScreen(),
     );
   }
 

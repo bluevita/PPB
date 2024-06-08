@@ -3,7 +3,7 @@ import '../../core/app_export.dart';
 import '../custom_search_view.dart'; // ignore: must_be_immutable
 
 class AppbarTitleSearchview extends StatelessWidget {
-  AppbarTitleSearchview({
+  const AppbarTitleSearchview({
     Key? key,
     this.hintText,
     this.controller,

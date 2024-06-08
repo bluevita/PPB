@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../core/app_export.dart';
 import '../../widgets/app_bar/appbar_leading_image.dart';
 import '../../widgets/app_bar/appbar_title.dart';
@@ -18,8 +17,8 @@ class KategoriActionScreen extends StatelessWidget {
         KategoriActionState(
           kategoriActionModelObj: KategoriActionModel(),
         ),
-      )..add(KategoriActionInitialEvent()),
-      child: KategoriActionScreen(),
+      )..add(const KategoriActionInitialEvent()),
+      child: const KategoriActionScreen(),
     );
   }
 
@@ -39,7 +38,7 @@ class KategoriActionScreen extends StatelessWidget {
             selector: (state) => state.kategoriActionModelObj,
             builder: (context, kategoriActionModelObj) {
               return ListView.separated(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 separatorBuilder: (context, index) {
                   return SizedBox(

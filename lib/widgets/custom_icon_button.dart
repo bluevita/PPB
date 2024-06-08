@@ -10,7 +10,7 @@ class CustomIconButton extends StatelessWidget {
   final Widget? child;
   final VoidCallback? onTap;
 
-  CustomIconButton({
+  const CustomIconButton({
     Key? key,
     this.alignment,
     this.height,

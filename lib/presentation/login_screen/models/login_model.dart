@@ -10,13 +10,13 @@ class LoginModel extends Equatable {
   // final String email;
   // final String password;
 
-  LoginModel();
+  const LoginModel();
 
   LoginModel copyWith() {
     // Add your copy logic here if any variables are present
     // For example:
     // return LoginModel(email: email ?? this.email, password: password ?? this.password);
-    return LoginModel();
+    return const LoginModel();
   }
 
   @override

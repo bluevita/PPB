@@ -8,7 +8,7 @@ class RegisterState extends Equatable {
   final TextEditingController? passwordController;
   final RegisterModel? registerModelObj;
 
-  RegisterState({
+  const RegisterState({
     this.nameController,
     this.emailController,
     this.passwordController,

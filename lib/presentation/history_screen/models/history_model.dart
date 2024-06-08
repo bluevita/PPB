@@ -7,7 +7,7 @@ import 'listview_item_model.dart';
 class HistoryModel extends Equatable {
   final List<ListviewItemModel> listviewItemList;
 
-  HistoryModel({this.listviewItemList = const []});
+  const HistoryModel({this.listviewItemList = const []});
 
   HistoryModel copyWith({List<ListviewItemModel>? listviewItemList}) {
     return HistoryModel(

@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_this
+
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -35,7 +37,7 @@ class CustomImageView extends StatelessWidget {
   final BoxBorder? border;
   final String placeHolder;
 
-  CustomImageView({
+  const CustomImageView({
     Key? key,
     this.imagePath,
     this.height,
@@ -96,7 +98,7 @@ class CustomImageView extends StatelessWidget {
     if (imagePath != null) {
       switch (imagePath!.imageType) {
         case ImageType.svg:
-          return Container(
+          return SizedBox(
             height: height,
             width: width,
             child: SvgPicture.asset(
@@ -124,7 +126,7 @@ class CustomImageView extends StatelessWidget {
             fit: fit,
             imageUrl: imagePath!,
             color: color,
-            placeholder: (context, url) => Container(
+            placeholder: (context, url) => SizedBox(
               height: 30,
               width: 30,
               child: CircularProgressIndicator(
@@ -150,6 +152,6 @@ class CustomImageView extends StatelessWidget {
           );
       }
     }
-    return SizedBox();
+    return const SizedBox();
   }
 }

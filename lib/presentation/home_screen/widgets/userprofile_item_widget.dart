@@ -6,7 +6,7 @@ class UserprofileItemWidget extends StatelessWidget {
   final UserprofileItemModel userprofileItemModelObj;
   final VoidCallback? onTapStack;
 
-  UserprofileItemWidget(this.userprofileItemModelObj,
+  const UserprofileItemWidget(this.userprofileItemModelObj,
       {Key? key, this.onTapStack})
       : super(key: key);
 
@@ -25,7 +25,7 @@ class UserprofileItemWidget extends StatelessWidget {
               child: Container(
                 height: 62,
                 width: 62,
-                padding: EdgeInsets.all(11),
+                padding: const EdgeInsets.all(11),
                 decoration: AppDecoration.fillSecondaryContainer.copyWith(
                   borderRadius: BorderRadius.circular(8),
                 ),
@@ -38,7 +38,7 @@ class UserprofileItemWidget extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 4),
+            const SizedBox(height: 4),
             Text(
               userprofileItemModelObj.romanceText!,
               style: CustomTextStyles.labelMediumOnPrimary,

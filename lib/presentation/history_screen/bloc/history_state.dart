@@ -5,7 +5,7 @@ part of 'history_bloc.dart';
 class HistoryState extends Equatable {
   final HistoryModel? historyModelObj;
 
-  HistoryState({this.historyModelObj});
+  const HistoryState({this.historyModelObj});
 
   @override
   List<Object?> get props => [historyModelObj];

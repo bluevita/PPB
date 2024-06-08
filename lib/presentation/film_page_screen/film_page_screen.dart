@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../core/app_export.dart';
 import '../../theme/custom_button_style.dart';
 import '../../widgets/app_bar/appbar_title_searchview.dart';
@@ -15,9 +14,9 @@ class FilmPageScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
     return BlocProvider<FilmPageBloc>(
       create: (context) =>
-          FilmPageBloc(FilmPageState(filmPageModelObj: FilmPageModel()))
+          FilmPageBloc(FilmPageState(filmPageModelObj: const FilmPageModel()))
             ..add(FilmPageInitialEvent()),
-      child: FilmPageScreen(),
+      child: const FilmPageScreen(),
     );
   }
 

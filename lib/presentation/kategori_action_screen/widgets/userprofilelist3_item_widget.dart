@@ -56,7 +56,7 @@ class Userprofilelist3ItemWidget extends StatelessWidget {
                         SizedBox(height: 4.v),
                         Padding(
                           padding: EdgeInsets.only(left: 25.h),
-                          child: CustomRatingBar(
+                          child: const CustomRatingBar(
                             ignoreGestures: true,
                             initialRating: 5,
                           ),

@@ -7,7 +7,7 @@ class PaymentMethodState extends Equatable {
   final TextEditingController? conveniencefeeController;
   final PaymentMethodModel? paymentMethodModelObj;
 
-  PaymentMethodState({
+  const PaymentMethodState({
     this.searchController,
     this.conveniencefeeController,
     this.paymentMethodModelObj,

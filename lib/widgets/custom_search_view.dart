@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_web_libraries_in_flutter
+
 import 'dart:js';
 
 import 'package:flutter/material.dart';
@@ -11,7 +13,7 @@ extension SearchViewStyleHelper on CustomSearchView {
 }
 
 class CustomSearchView extends StatelessWidget {
-  CustomSearchView({
+  const CustomSearchView({
     Key? key,
     this.alignment,
     this.width,

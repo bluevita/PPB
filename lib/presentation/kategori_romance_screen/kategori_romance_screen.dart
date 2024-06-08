@@ -12,10 +12,10 @@ class KategoriRomanceScreen extends StatelessWidget {
 
   static Widget builder(BuildContext context) {
     return BlocProvider<KategoriRomanceBloc>(
-      create: (context) => KategoriRomanceBloc(
-          KategoriRomanceState(kategoriRomanceModelObj: KategoriRomanceModel()))
+      create: (context) => KategoriRomanceBloc(const KategoriRomanceState(
+          kategoriRomanceModelObj: KategoriRomanceModel()))
         ..add(KategoriRomanceInitialEvent()),
-      child: KategoriRomanceScreen(),
+      child: const KategoriRomanceScreen(),
     );
   }
 
@@ -28,12 +28,12 @@ class KategoriRomanceScreen extends StatelessWidget {
         appBar: _buildAppbar(context),
         body: Container(
           width: double.maxFinite,
-          padding: EdgeInsets.symmetric(vertical: 30),
+          padding: const EdgeInsets.symmetric(vertical: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _buildUserProfileList(context),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 children: [
                   Text(
@@ -41,7 +41,7 @@ class KategoriRomanceScreen extends StatelessWidget {
                     style: theme.textTheme.labelLarge,
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 83),
+                    padding: const EdgeInsets.only(left: 83),
                     child: Text(
                       "lbl_river_ran".tr,
                       style: theme.textTheme.labelLarge,
@@ -49,7 +49,7 @@ class KategoriRomanceScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
             ],
           ),
         ),
@@ -62,7 +62,7 @@ class KategoriRomanceScreen extends StatelessWidget {
       actions: [
         AppbarTrailingImage(
           imagePath: ImageConstant.imgIcon,
-          margin: EdgeInsets.symmetric(horizontal: 39, vertical: 16),
+          margin: const EdgeInsets.symmetric(horizontal: 39, vertical: 16),
         ),
       ],
     );
@@ -74,10 +74,10 @@ class KategoriRomanceScreen extends StatelessWidget {
       selector: (state) => state.kategoriRomanceModelObj,
       builder: (context, kategoriRomanceModelObj) {
         return ListView.separated(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           separatorBuilder: (context, index) {
-            return SizedBox(height: 20);
+            return const SizedBox(height: 20);
           },
           itemCount:
               kategoriRomanceModelObj?.userprofilelist1ItemList.length ?? 0,

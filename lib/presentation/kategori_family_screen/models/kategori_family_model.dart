@@ -7,7 +7,7 @@ import 'userprofilelist2_item_model.dart';
 /// and is typically used to hold data that is passed between different parts of the application.
 // ignore_for_file: must_be_immutable
 class KategoriFamilyModel extends Equatable {
-  KategoriFamilyModel({this.userprofilelist2ItemList = const []});
+  const KategoriFamilyModel({this.userprofilelist2ItemList = const []});
 
   final List<Userprofilelist2ItemModel> userprofilelist2ItemList;
 

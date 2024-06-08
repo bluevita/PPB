@@ -20,6 +20,6 @@ class AppNavigationBloc extends Bloc<AppNavigationEvent, AppNavigationState> {
 
   Stream<AppNavigationState> _mapInitializeToState() async* {
     // Logic for initializing the app navigation state can go here
-    yield AppNavigationState(appNavigationModelObj: AppNavigationModel());
+    yield const AppNavigationState(appNavigationModelObj: AppNavigationModel());
   }
 }

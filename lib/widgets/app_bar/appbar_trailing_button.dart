@@ -5,7 +5,7 @@ import '../custom_elevated_button.dart';
 
 // ignore_for_file: must_be_immutable
 class AppbarTrailingButton extends StatelessWidget {
-  AppbarTrailingButton({
+  const AppbarTrailingButton({
     Key? key,
     this.margin,
     this.onTap,

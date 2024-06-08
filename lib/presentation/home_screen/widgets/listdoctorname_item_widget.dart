@@ -6,7 +6,7 @@ import '../models/listdoctorname_item_model.dart';
 class ListdoctornameItemWidget extends StatelessWidget {
   final ListdoctornameItemModel listdoctornameItemModelObj;
 
-  ListdoctornameItemWidget(this.listdoctornameItemModelObj, {Key? key})
+  const ListdoctornameItemWidget(this.listdoctornameItemModelObj, {Key? key})
       : super(key: key);
 
   @override
@@ -22,13 +22,13 @@ class ListdoctornameItemWidget extends StatelessWidget {
             width: 131,
             radius: BorderRadius.circular(10),
           ),
-          SizedBox(height: 9),
+          const SizedBox(height: 9),
           Text(
             listdoctornameItemModelObj.doctorName!,
             style: theme.textTheme.labelLarge,
           ),
-          SizedBox(height: 2),
-          CustomRatingBar(
+          const SizedBox(height: 2),
+          const CustomRatingBar(
             ignoreGestures: true,
             initialRating: 5,
             itemSize: 10,

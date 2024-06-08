@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_web_libraries_in_flutter
+
 import 'dart:js';
 
 import 'package:flutter/material.dart';
@@ -6,7 +8,7 @@ import '../core/app_export.dart';
 
 // ignore_for_file: must_be_immutable
 class CustomRatingBar extends StatelessWidget {
-  CustomRatingBar({
+  const CustomRatingBar({
     Key? key,
     this.alignment,
     this.ignoreGestures,

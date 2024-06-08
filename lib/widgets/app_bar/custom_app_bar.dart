@@ -12,7 +12,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool? centerTitle;
   final List<Widget>? actions;
 
-  CustomAppBar({
+  const CustomAppBar({
     Key? key,
     this.height,
     this.styleType,
@@ -34,7 +34,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       leadingWidth: leadingWidth ?? 0,
       leading: leading,
       title: title,
-      toolbarTextStyle: Theme.of(context).textTheme.headline6,
+      toolbarTextStyle: Theme.of(context).textTheme.titleLarge,
       centerTitle: centerTitle ?? false,
       actions: actions,
     );

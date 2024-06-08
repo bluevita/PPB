@@ -11,11 +11,11 @@ class TampilanAwalScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
     return BlocProvider<TampilanAwalBloc>(
       create: (context) => TampilanAwalBloc(
-        TampilanAwalState(
+        const TampilanAwalState(
           tampilanAwalModelObj: TampilanAwalModel(),
         ),
       )..add(TampilanAwalInitialEvent()),
-      child: TampilanAwalScreen(),
+      child: const TampilanAwalScreen(),
     );
   }
 

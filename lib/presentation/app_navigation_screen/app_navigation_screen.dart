@@ -11,9 +11,9 @@ class AppNavigationScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
     return BlocProvider<AppNavigationBloc>(
       create: (context) => AppNavigationBloc(
-          AppNavigationState(appNavigationModelObj: AppNavigationModel()))
+          const AppNavigationState(appNavigationModelObj: AppNavigationModel()))
         ..add(AppNavigationInitialEvent()),
-      child: AppNavigationScreen(),
+      child: const AppNavigationScreen(),
     );
   }
 

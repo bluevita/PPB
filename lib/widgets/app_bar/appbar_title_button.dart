@@ -4,7 +4,7 @@ import '../../theme/custom_button_style.dart';
 import '../custom_elevated_button.dart'; // ignore: must_be_immutable
 
 class AppbarTitleButton extends StatelessWidget {
-  AppbarTitleButton({
+  const AppbarTitleButton({
     Key? key,
     this.margin,
     this.onTap,

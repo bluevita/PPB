@@ -2,7 +2,6 @@ import 'dart:core';
 
 // ignore: unused_import
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 import '../../../core/app_export.dart';
 import '../models/history_model.dart';

@@ -19,7 +19,7 @@ class CustomTextFormField extends StatelessWidget {
   // Properti onChanged ditambahkan
   final ValueChanged<String>? onChanged;
 
-  CustomTextFormField({
+  const CustomTextFormField({
     Key? key,
     this.alignment,
     this.width,

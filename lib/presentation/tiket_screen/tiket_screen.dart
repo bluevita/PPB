@@ -1,5 +1,6 @@
+// ignore_for_file: unused_element
+
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../core/app_export.dart';
 import '../../theme/custom_button_style.dart';
 import '../../widgets/app_bar/appbar_title.dart';
@@ -13,9 +14,10 @@ class TiketScreen extends StatelessWidget {
 
   static Widget builder(BuildContext context) {
     return BlocProvider<TiketBloc>(
-      create: (context) => TiketBloc(TiketState(tiketModelObj: TiketModel()))
-        ..add(TiketInitialEvent()),
-      child: TiketScreen(),
+      create: (context) =>
+          TiketBloc(const TiketState(tiketModelObj: TiketModel()))
+            ..add(TiketInitialEvent()),
+      child: const TiketScreen(),
     );
   }
 
@@ -45,7 +47,7 @@ class TiketScreen extends StatelessWidget {
                             style: theme.textTheme.labelLarge,
                           ),
                         ),
-                        Spacer(flex: 60),
+                        const Spacer(flex: 60),
                         Padding(
                           padding: EdgeInsets.only(top: 617.v, bottom: 7.v),
                           child: Text(
@@ -53,7 +55,7 @@ class TiketScreen extends StatelessWidget {
                             style: theme.textTheme.labelLarge,
                           ),
                         ),
-                        Spacer(flex: 39),
+                        const Spacer(flex: 39),
                         SizedBox(
                           height: 642.v,
                           width: 387.h,
@@ -154,7 +156,7 @@ class TiketScreen extends StatelessWidget {
                                                       ),
                                                     ),
                                                     SizedBox(height: 15.v),
-                                                    Divider(),
+                                                    const Divider(),
                                                     SizedBox(height: 17.v),
                                                     Padding(
                                                       padding: EdgeInsets.only(
@@ -182,7 +184,7 @@ class TiketScreen extends StatelessWidget {
                                                               ),
                                                             ],
                                                           ),
-                                                          Spacer(),
+                                                          const Spacer(),
                                                           Column(
                                                             crossAxisAlignment:
                                                                 CrossAxisAlignment
@@ -426,7 +428,7 @@ class TiketScreen extends StatelessWidget {
                           margin: EdgeInsets.only(
                               left: 12.h, top: 5.v, bottom: 5.v),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         CustomImageView(
                           imagePath: ImageConstant.imgLock,
                           height: 28.adaptSize,
@@ -480,34 +482,6 @@ class TiketScreen extends StatelessWidget {
       buttonStyle: CustomButtonStyles.fillBlueGray,
     );
   }
-}
-
-Widget _buildRow(BuildContext context,
-    {required String date, required String time}) {
-  return SizedBox(
-    width: 197.h,
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          "lbl_date".tr,
-          style: CustomTextStyles.labelLargeBluegray200,
-        ),
-        Text(
-          date,
-          style: CustomTextStyles.labelLargeOnErrorContainer,
-        ),
-        Text(
-          "lbl_time".tr,
-          style: CustomTextStyles.labelLargeBluegray200,
-        ),
-        Text(
-          time,
-          style: CustomTextStyles.labelLargeOnErrorContainer,
-        ),
-      ],
-    ),
-  );
 }
 
 Widget _buildRowView(BuildContext context) {

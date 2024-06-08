@@ -7,7 +7,7 @@ class LoginState extends Equatable {
   final TextEditingController? passwordController;
   final LoginModel? loginModelObj;
 
-  LoginState({
+  const LoginState({
     this.emailController,
     this.passwordController,
     this.loginModelObj,

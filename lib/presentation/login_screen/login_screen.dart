@@ -11,7 +11,6 @@ import '../../widgets/custom_text_form_field.dart';
 import 'bloc/login_bloc.dart';
 // ignore: unused_import
 import 'models/login_model.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
@@ -20,7 +19,7 @@ class LoginScreen extends StatelessWidget {
 
   static Widget builder(BuildContext context) {
     return BlocProvider<LoginBloc>(
-      create: (context) => LoginBloc()..add(LoginInitialEvent()),
+      create: (context) => LoginBloc()..add(const LoginInitialEvent()),
       child: LoginScreen(),
     );
   }

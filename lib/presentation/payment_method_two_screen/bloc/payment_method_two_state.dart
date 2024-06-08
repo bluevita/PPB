@@ -2,7 +2,7 @@ part of 'payment_method_two_bloc.dart';
 
 /// Represents the state of Payment MethodTwo in the application.
 class PaymentMethodTwoState extends Equatable {
-  PaymentMethodTwoState({
+  const PaymentMethodTwoState({
     this.searchController,
     this.conveniencefeeController,
     this.paymentMethodTwoModelObj,

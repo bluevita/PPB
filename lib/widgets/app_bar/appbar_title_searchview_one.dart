@@ -4,7 +4,7 @@ import '../custom_search_view.dart';
 
 // ignore_for_file: must_be_immutable
 class AppbarTitleSearchviewOne extends StatelessWidget {
-  AppbarTitleSearchviewOne({
+  const AppbarTitleSearchviewOne({
     Key? key,
     this.hintText,
     this.controller,

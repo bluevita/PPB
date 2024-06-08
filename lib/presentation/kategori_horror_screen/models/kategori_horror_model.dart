@@ -6,7 +6,7 @@ import 'userprofilelist_item_model.dart';
 /// This class defines the variables used in the [kategori_horror_screen],
 /// and is typically used to hold data that is passed between different parts of the application.
 class KategoriHorrorModel extends Equatable {
-  KategoriHorrorModel({required this.userprofilelistItemList});
+  const KategoriHorrorModel({required this.userprofilelistItemList});
 
   final List<UserprofilelistItemModel> userprofilelistItemList;
 

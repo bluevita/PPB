@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../core/app_export.dart';
 import '../../theme/custom_button_style.dart';
 import '../../widgets/app_bar/appbar_title.dart';
@@ -16,9 +15,9 @@ class HistoryScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
     return BlocProvider<HistoryBloc>(
       create: (context) => HistoryBloc(
-        HistoryState(historyModelObj: HistoryModel()),
-      )..add(HistoryInitialEvent()),
-      child: HistoryScreen(),
+        const HistoryState(historyModelObj: HistoryModel()),
+      )..add(const HistoryInitialEvent()),
+      child: const HistoryScreen(),
     );
   }
 
@@ -52,7 +51,7 @@ class HistoryScreen extends StatelessWidget {
                       width: 28.adaptSize,
                       margin: EdgeInsets.symmetric(vertical: 5.v),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     CustomImageView(
                       imagePath: ImageConstant.imgTicket,
                       height: 28.adaptSize,
@@ -113,7 +112,7 @@ class HistoryScreen extends StatelessWidget {
       selector: (state) => state.historyModelObj,
       builder: (context, historyModelObj) {
         return ListView.separated(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           separatorBuilder: (context, index) {
             return SizedBox(height: 17.v);

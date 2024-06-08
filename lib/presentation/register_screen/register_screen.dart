@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../core/app_export.dart';
 import '../../core/utils/validation_functions.dart';
 import '../../theme/custom_button_style.dart';
@@ -20,7 +19,7 @@ class RegisterScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
     return BlocProvider<RegisterBloc>(
       create: (context) =>
-          RegisterBloc(RegisterState(registerModelObj: RegisterModel()))
+          RegisterBloc(const RegisterState(registerModelObj: RegisterModel()))
             ..add(RegisterInitialEvent()),
       child: RegisterScreen(),
     );

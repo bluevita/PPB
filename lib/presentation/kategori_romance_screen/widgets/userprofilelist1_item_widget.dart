@@ -7,7 +7,8 @@ import '../models/userprofilelist1_item_model.dart';
 class Userprofilelist1ItemWidget extends StatelessWidget {
   final Userprofilelist1ItemModel userprofilelist1ItemModelObj;
 
-  Userprofilelist1ItemWidget(this.userprofilelist1ItemModelObj, {Key? key})
+  const Userprofilelist1ItemWidget(this.userprofilelist1ItemModelObj,
+      {Key? key})
       : super(key: key);
 
   @override
@@ -24,7 +25,7 @@ class Userprofilelist1ItemWidget extends StatelessWidget {
             alignment: Alignment.topRight,
             child: Container(
               width: 147,
-              margin: EdgeInsets.only(top: 47, right: 49),
+              margin: const EdgeInsets.only(top: 47, right: 49),
               child: Text(
                 userprofilelist1ItemModelObj.blablablablalsa!,
                 maxLines: 2,
@@ -36,7 +37,7 @@ class Userprofilelist1ItemWidget extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               decoration: AppDecoration.fillSecondaryContainer.copyWith(
                 borderRadius: BorderRadiusStyle.roundedBorder30,
               ),
@@ -45,7 +46,7 @@ class Userprofilelist1ItemWidget extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.only(top: 7),
+                      padding: const EdgeInsets.only(top: 7),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -55,8 +56,8 @@ class Userprofilelist1ItemWidget extends StatelessWidget {
                             width: 100,
                             radius: BorderRadius.circular(10),
                           ),
-                          SizedBox(height: 4),
-                          Padding(
+                          const SizedBox(height: 4),
+                          const Padding(
                             padding: EdgeInsets.only(left: 25),
                             child: CustomRatingBar(
                               ignoreGestures: true,
@@ -69,7 +70,8 @@ class Userprofilelist1ItemWidget extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.only(left: 17, top: 4, bottom: 13),
+                      padding:
+                          const EdgeInsets.only(left: 17, top: 4, bottom: 13),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -77,19 +79,19 @@ class Userprofilelist1ItemWidget extends StatelessWidget {
                             userprofilelist1ItemModelObj.subheading!,
                             style: theme.textTheme.titleMedium,
                           ),
-                          SizedBox(height: 1),
-                          SizedBox(width: 151),
+                          const SizedBox(height: 1),
+                          const SizedBox(width: 151),
                           Text(
                             userprofilelist1ItemModelObj.description!,
                             maxLines: 3,
                             overflow: TextOverflow.ellipsis,
                             style: theme.textTheme.bodySmall,
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           CustomElevatedButton(
                             height: 26,
                             text: "lbl_beli_tiket".tr,
-                            margin: EdgeInsets.only(left: 10, right: 29),
+                            margin: const EdgeInsets.only(left: 10, right: 29),
                             buttonTextStyle: CustomTextStyles
                                 .labelLargeOnPrimaryContainerBold,
                           ),

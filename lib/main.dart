@@ -11,11 +11,13 @@ void main() {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
   ]).then((value) {
     PrefUtils().init();
-    runApp(MyApp());
+    runApp(const MyApp());
   });
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Sizer(
@@ -33,13 +35,13 @@ class MyApp extends StatelessWidget {
                 title: 'bioskop',
                 navigatorKey: NavigatorService.navigatorKey,
                 debugShowCheckedModeBanner: false,
-                localizationsDelegates: [
+                localizationsDelegates: const [
                   AppLocalizationDelegate(),
                   GlobalMaterialLocalizations.delegate,
                   GlobalWidgetsLocalizations.delegate,
                   GlobalCupertinoLocalizations.delegate,
                 ],
-                supportedLocales: [Locale('en')],
+                supportedLocales: const [Locale('en')],
                 initialRoute: AppRoutes.initialRoute,
                 routes: AppRoutes.routes,
               );

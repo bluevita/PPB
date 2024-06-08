@@ -13,10 +13,10 @@ class KategoriFamilyScreen extends StatelessWidget {
 
   static Widget builder(BuildContext context) {
     return BlocProvider<KategoriFamilyBloc>(
-      create: (context) => KategoriFamilyBloc(
-          KategoriFamilyState(kategoriFamilyModelObj: KategoriFamilyModel()))
+      create: (context) => KategoriFamilyBloc(const KategoriFamilyState(
+          kategoriFamilyModelObj: KategoriFamilyModel()))
         ..add(KategoriFamilyInitialEvent()),
-      child: KategoriFamilyScreen(),
+      child: const KategoriFamilyScreen(),
     );
   }
 
@@ -32,7 +32,7 @@ class KategoriFamilyScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _buildUserProfileList(context),
-              Spacer(),
+              const Spacer(),
               Padding(
                 padding: EdgeInsets.only(right: 124.h),
                 child: Row(
@@ -54,7 +54,7 @@ class KategoriFamilyScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Spacer(flex: 40),
+              const Spacer(flex: 40),
             ],
           ),
         ),
@@ -88,7 +88,7 @@ class KategoriFamilyScreen extends StatelessWidget {
           selector: (state) => state.kategoriFamilyModelObj,
           builder: (context, kategoriFamilyModelObj) {
             return ListView.separated(
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               separatorBuilder: (context, index) => SizedBox(height: 20.v),
               itemCount:

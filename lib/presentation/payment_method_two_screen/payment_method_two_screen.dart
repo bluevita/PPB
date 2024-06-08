@@ -1,7 +1,6 @@
 // ignore_for_file: unused_import
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../core/app_export.dart';
 import '../../widgets/app_bar/appbar_title_searchview_one.dart';
 import '../../widgets/app_bar/custom_app_bar.dart';
@@ -14,8 +13,8 @@ class PaymentMethodTwoScreen extends StatelessWidget {
 
   static Widget builder(BuildContext context) {
     return BlocProvider<PaymentMethodTwoBloc>(
-      create: (context) => PaymentMethodTwoBloc(PaymentMethodTwoState()),
-      child: PaymentMethodTwoScreen(),
+      create: (context) => PaymentMethodTwoBloc(const PaymentMethodTwoState()),
+      child: const PaymentMethodTwoScreen(),
     );
   }
 
@@ -60,7 +59,7 @@ class PaymentMethodTwoScreen extends StatelessWidget {
                       child: Text("lbl_dana".tr,
                           style: theme.textTheme.titleSmall),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     CustomImageView(
                       imagePath: ImageConstant.imgArrowRight,
                       height: 15.v,
@@ -90,7 +89,7 @@ class PaymentMethodTwoScreen extends StatelessWidget {
                       child: Text("lbl_gopay".tr,
                           style: theme.textTheme.titleSmall),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     CustomImageView(
                       imagePath: ImageConstant.imgArrowRight,
                       height: 15.v,
@@ -121,7 +120,7 @@ class PaymentMethodTwoScreen extends StatelessWidget {
                       child:
                           Text("lbl_ovo".tr, style: theme.textTheme.titleSmall),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     CustomImageView(
                       imagePath: ImageConstant.imgArrowRight,
                       height: 15.v,
@@ -154,7 +153,7 @@ class PaymentMethodTwoScreen extends StatelessWidget {
                       child: Text("lbl_link_aja".tr,
                           style: theme.textTheme.titleSmall),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Padding(
                       padding:
                           EdgeInsets.only(top: 11.v, right: 7.h, bottom: 11.v),

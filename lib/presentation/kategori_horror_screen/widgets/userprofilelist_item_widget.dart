@@ -5,7 +5,7 @@ import '../../../widgets/custom_rating_bar.dart';
 import '../models/userprofilelist_item_model.dart';
 
 class UserprofilelistItemWidget extends StatelessWidget {
-  UserprofilelistItemWidget(
+  const UserprofilelistItemWidget(
     this.userprofilelistItemModelObj, {
     Key? key,
     this.onTapDynamicButton,
@@ -59,7 +59,7 @@ class UserprofilelistItemWidget extends StatelessWidget {
                         SizedBox(height: 4.v),
                         Padding(
                           padding: EdgeInsets.only(left: 25.h),
-                          child: CustomRatingBar(
+                          child: const CustomRatingBar(
                             ignoreGestures: true,
                             initialRating: 5,
                           ),
@@ -79,7 +79,7 @@ class UserprofilelistItemWidget extends StatelessWidget {
                             style: theme.textTheme.titleMedium,
                           ),
                           SizedBox(height: 1.v),
-                          Container(
+                          SizedBox(
                             width: 145.h,
                             child: Text(
                               userprofilelistItemModelObj.dynamicText2!,

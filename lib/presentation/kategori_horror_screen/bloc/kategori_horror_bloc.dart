@@ -1,7 +1,6 @@
 // ignore: unused_import
 import 'package:flutter/material.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/app_export.dart';
 import '../../kategori_horror_screen/models/kategori_horror_model.dart';
 import '../models/userprofilelist_item_model.dart';

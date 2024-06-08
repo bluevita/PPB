@@ -6,8 +6,11 @@ import '../app_export.dart';
 
 // These are the Viewport values of your Figma Design.
 // These are used in the code as a reference to create your UI Responsively.
+// ignore: constant_identifier_names
 const num FIGMA_DESIGN_WIDTH = 414;
+// ignore: constant_identifier_names
 const num FIGMA_DESIGN_HEIGHT = 896;
+// ignore: constant_identifier_names
 const num FIGMA_DESIGN_STATUS_BAR = 0;
 
 extension ResponsiveExtension on num {
@@ -27,7 +30,7 @@ extension ResponsiveExtension on num {
 
 extension FormatExtension on double {
   double toDoubleValue({int fractionDigits = 2}) {
-    return double.parse(this.toStringAsFixed(fractionDigits));
+    return double.parse(toStringAsFixed(fractionDigits));
   }
 
   double isNonZero({num defaultValue = 0.0}) {

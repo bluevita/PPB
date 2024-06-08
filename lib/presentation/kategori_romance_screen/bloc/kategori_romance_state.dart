@@ -4,7 +4,7 @@ part of 'kategori_romance_bloc.dart';
 class KategoriRomanceState extends Equatable {
   final KategoriRomanceModel? kategoriRomanceModelObj;
 
-  KategoriRomanceState({this.kategoriRomanceModelObj});
+  const KategoriRomanceState({this.kategoriRomanceModelObj});
 
   @override
   List<Object?> get props => [kategoriRomanceModelObj];

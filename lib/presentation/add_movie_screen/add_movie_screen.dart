@@ -8,7 +8,6 @@ import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_text_form_field.dart';
 import 'bloc/add_movie_bloc.dart';
 import 'models/add_movie_model.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AddMovieScreen extends StatelessWidget {
   AddMovieScreen({Key? key}) : super(key: key);
@@ -18,7 +17,7 @@ class AddMovieScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
     return BlocProvider<AddMovieBloc>(
       create: (context) =>
-          AddMovieBloc(AddMovieState(addMovieModelObj: AddMovieModel()))
+          AddMovieBloc(AddMovieState(addMovieModelObj: const AddMovieModel()))
             ..add(AddMovieInitialEvent()),
       child: AddMovieScreen(),
     );
@@ -57,7 +56,7 @@ class AddMovieScreen extends StatelessWidget {
   }
 
   PreferredSizeWidget _buildAppBar(BuildContext context) {
-    return CustomAppBar(
+    return const CustomAppBar(
       centerTitle: true,
       title: AppbarTitleButton(),
     );

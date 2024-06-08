@@ -12,11 +12,11 @@ class PaymentMethodOneScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
     return BlocProvider<PaymentMethodOneBloc>(
       create: (context) => PaymentMethodOneBloc(
-        PaymentMethodOneState(
+        const PaymentMethodOneState(
           paymentMethodOneModelObj: PaymentMethodOneModel(),
         ),
       )..add(PaymentMethodOneInitialEvent()),
-      child: PaymentMethodOneScreen(),
+      child: const PaymentMethodOneScreen(),
     );
   }
 
@@ -61,7 +61,7 @@ class PaymentMethodOneScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Spacer(flex: 35),
+                  const Spacer(flex: 35),
                   _buildStackPaymentDetails(context),
                   SizedBox(height: 21.v),
                   Text(
@@ -89,7 +89,7 @@ class PaymentMethodOneScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Spacer(flex: 64),
+                  const Spacer(flex: 64),
                 ],
               ),
             ),

@@ -6,7 +6,7 @@ import '../models/app_navigation_model.dart';
 /// Represents the state of AppNavigation in the application.
 // ignore_for_file: must_be_immutable
 class AppNavigationState extends Equatable {
-  AppNavigationState({this.appNavigationModelObj});
+  const AppNavigationState({this.appNavigationModelObj});
 
   final AppNavigationModel? appNavigationModelObj;
 

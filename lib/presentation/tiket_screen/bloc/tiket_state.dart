@@ -3,7 +3,7 @@ part of 'tiket_bloc.dart';
 class TiketState extends Equatable {
   final TiketModel? tiketModelObj;
 
-  TiketState({this.tiketModelObj});
+  const TiketState({this.tiketModelObj});
 
   @override
   List<Object?> get props => [tiketModelObj];

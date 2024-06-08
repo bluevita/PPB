@@ -13,12 +13,12 @@ class KategoriHorrorScreen extends StatelessWidget {
 
   static Widget builder(BuildContext context) {
     return BlocProvider<KategoriHorrorBloc>(
-      create: (context) => KategoriHorrorBloc(KategoriHorrorState(
+      create: (context) => KategoriHorrorBloc(const KategoriHorrorState(
         kategoriHorrorModelObj:
             KategoriHorrorModel(userprofilelistItemList: []),
       ))
         ..add(KategoriHorrorInitialEvent()),
-      child: KategoriHorrorScreen(),
+      child: const KategoriHorrorScreen(),
     );
   }
 
@@ -34,7 +34,7 @@ class KategoriHorrorScreen extends StatelessWidget {
             selector: (state) => state.kategoriHorrorModelObj,
             builder: (context, kategoriHorrorModelObj) {
               return ListView.separated(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 separatorBuilder: (context, index) => SizedBox(height: 20.v),
                 itemCount:

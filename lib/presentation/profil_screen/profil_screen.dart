@@ -13,9 +13,9 @@ class ProfilScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
     return BlocProvider<ProfilBloc>(
       create: (context) =>
-          ProfilBloc(ProfilState(profilModelObj: ProfilModel()))
+          ProfilBloc(const ProfilState(profilModelObj: ProfilModel()))
             ..add(ProfilInitialEvent()),
-      child: ProfilScreen(),
+      child: const ProfilScreen(),
     );
   }
 
@@ -145,7 +145,7 @@ class ProfilScreen extends StatelessWidget {
                             style: theme.textTheme.titleSmall,
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         CustomImageView(
                           imagePath: ImageConstant.imgArrowRight,
                           height: 15.v,
@@ -158,7 +158,7 @@ class ProfilScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 26.v),
                   _buildGeneralSection(context),
-                  Spacer(),
+                  const Spacer(),
                   Align(
                     alignment: Alignment.centerRight,
                     child: Padding(
@@ -172,7 +172,7 @@ class ProfilScreen extends StatelessWidget {
                             width: 28.adaptSize,
                             margin: EdgeInsets.symmetric(vertical: 5.v),
                           ),
-                          Spacer(flex: 50),
+                          const Spacer(flex: 50),
                           CustomImageView(
                             imagePath: ImageConstant.imgTicket,
                             height: 28.adaptSize,
@@ -182,7 +182,7 @@ class ProfilScreen extends StatelessWidget {
                               onTapImgTicketone(context);
                             },
                           ),
-                          Spacer(flex: 50),
+                          const Spacer(flex: 50),
                           CustomImageView(
                             imagePath: ImageConstant.imgOutlineGeneralClock,
                             height: 28.adaptSize,
@@ -270,7 +270,7 @@ class ProfilScreen extends StatelessWidget {
                     style: theme.textTheme.titleSmall,
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 CustomImageView(
                   imagePath: ImageConstant.imgArrowRightTealA100,
                   height: 15.v,

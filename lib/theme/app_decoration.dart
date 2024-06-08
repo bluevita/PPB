@@ -43,12 +43,12 @@ class AppDecoration {
             color: appTheme.black900.withOpacity(0.18),
             spreadRadius: 2.h,
             blurRadius: 2.h,
-            offset: Offset(0, 3.51),
+            offset: const Offset(0, 3.51),
           ),
         ],
       );
 
-  static BoxDecoration get outlineBlack900 => BoxDecoration();
+  static BoxDecoration get outlineBlack900 => const BoxDecoration();
 
   static BoxDecoration get outlineBlack9001 => BoxDecoration(
         color: appTheme.gray800,
@@ -57,7 +57,7 @@ class AppDecoration {
             color: appTheme.black900.withOpacity(0.1),
             spreadRadius: 2.h,
             blurRadius: 2.h,
-            offset: Offset(0, 4),
+            offset: const Offset(0, 4),
           ),
         ],
       );
@@ -69,12 +69,12 @@ class AppDecoration {
             color: appTheme.black900.withOpacity(0.25),
             spreadRadius: 2.h,
             blurRadius: 2.h,
-            offset: Offset(0, 4),
+            offset: const Offset(0, 4),
           ),
         ],
       );
 
-  static BoxDecoration get outlineBlack9003 => BoxDecoration();
+  static BoxDecoration get outlineBlack9003 => const BoxDecoration();
 
   static BoxDecoration get outlineBlueGray => BoxDecoration(
         color: theme.colorScheme.onPrimaryContainer,

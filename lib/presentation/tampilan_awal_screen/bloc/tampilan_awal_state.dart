@@ -3,7 +3,7 @@ part of 'tampilan_awal_bloc.dart';
 /// Represents the state of TampilanAwal in the application.
 // ignore_for_file: must_be_immutable
 class TampilanAwalState extends Equatable {
-  TampilanAwalState({this.tampilanAwalModelObj});
+  const TampilanAwalState({this.tampilanAwalModelObj});
 
   final TampilanAwalModel? tampilanAwalModelObj;
 

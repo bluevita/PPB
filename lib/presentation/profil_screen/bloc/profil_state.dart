@@ -4,7 +4,7 @@ part of 'profil_bloc.dart';
 class ProfilState extends Equatable {
   final ProfilModel? profilModelObj;
 
-  ProfilState({this.profilModelObj});
+  const ProfilState({this.profilModelObj});
 
   @override
   List<Object?> get props => [profilModelObj];

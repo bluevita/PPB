@@ -5,7 +5,8 @@ import '../../../widgets/custom_rating_bar.dart';
 import '../models/userprofilelist2_item_model.dart';
 
 class Userprofilelist2ItemWidget extends StatelessWidget {
-  Userprofilelist2ItemWidget(this.userprofilelist2ItemModelObj, {Key? key})
+  const Userprofilelist2ItemWidget(this.userprofilelist2ItemModelObj,
+      {Key? key})
       : super(key: key);
 
   final Userprofilelist2ItemModel userprofilelist2ItemModelObj;
@@ -56,7 +57,7 @@ class Userprofilelist2ItemWidget extends StatelessWidget {
                         SizedBox(height: 4.v),
                         Padding(
                           padding: EdgeInsets.only(left: 25.h),
-                          child: CustomRatingBar(
+                          child: const CustomRatingBar(
                             ignoreGestures: true,
                             initialRating: 5,
                           ),

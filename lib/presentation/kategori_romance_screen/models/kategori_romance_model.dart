@@ -8,7 +8,7 @@ import 'userprofilelist1_item_model.dart';
 class KategoriRomanceModel extends Equatable {
   final List<Userprofilelist1ItemModel> userprofilelist1ItemList;
 
-  KategoriRomanceModel({this.userprofilelist1ItemList = const []});
+  const KategoriRomanceModel({this.userprofilelist1ItemList = const []});
 
   KategoriRomanceModel copyWith(
       {List<Userprofilelist1ItemModel>? userprofilelist1ItemList}) {

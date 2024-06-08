@@ -22,7 +22,7 @@ class ReservasiScreen extends StatelessWidget {
       create: (context) =>
           ReservasiBloc(ReservasiState(reservasiModelObj: ReservasiModel()))
             ..add(ReservasiInitialEvent()),
-      child: ReservasiScreen(),
+      child: const ReservasiScreen(),
     );
   }
 
@@ -82,91 +82,6 @@ class ReservasiScreen extends StatelessWidget {
         ),
       ],
       styleType: Style.bgFill,
-    );
-  }
-
-  Widget _buildTimeAndDateSection(BuildContext context) {
-    return Align(
-      alignment: Alignment.centerLeft,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          Padding(
-            padding: EdgeInsets.only(right: 148.h),
-            child: Text(
-              "lbl_time_and_date".tr,
-              style: CustomTextStyles.titleMediumSemiBold,
-            ),
-          ),
-          SizedBox(height: 136.v),
-          SizedBox(
-            width: double.maxFinite,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                _buildTimeCard("lbl_14_302".tr),
-                _buildTimeCard("lbl_13_30".tr, leftMargin: 95.h),
-                _buildTimeCard("lbl_14_302".tr,
-                    leftMargin: 17.h, isSelected: true),
-                _buildTimeCard("lbl_17_30".tr, leftMargin: 161.h),
-              ],
-            ),
-          ),
-          SizedBox(height: 37.v),
-          Padding(
-            padding: EdgeInsets.only(left: 102.h, right: 41.h),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Column(
-                  children: [
-                    Text(
-                      "lbl_total_payment".tr,
-                      style: CustomTextStyles.labelMediumGray600,
-                    ),
-                    SizedBox(height: 4.v),
-                    Text(
-                      "lbl_rp_120_000".tr,
-                      style: CustomTextStyles.titleMediumMedium,
-                    ),
-                  ],
-                ),
-                SizedBox(width: 63.h),
-                CustomElevatedButton(
-                  height: 53.v,
-                  width: 181.h,
-                  text: "lbl_payment".tr,
-                  buttonStyle: CustomButtonStyles.fillTealATL26,
-                  buttonTextStyle:
-                      CustomTextStyles.titleMediumOnPrimaryContainer,
-                  onPressed: () {
-                    onTapPayment(context);
-                  },
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildTimeCard(String text,
-      {double leftMargin = 0, bool isSelected = false}) {
-    return Container(
-      width: 61.h,
-      margin: EdgeInsets.only(left: leftMargin),
-      padding: EdgeInsets.symmetric(horizontal: 11.h, vertical: 9.v),
-      decoration: isSelected
-          ? AppDecoration.outlineCyanA
-              .copyWith(borderRadius: BorderRadiusStyle.roundedBorder5)
-          : AppDecoration.fillBlueGray
-              .copyWith(borderRadius: BorderRadiusStyle.roundedBorder5),
-      child: Text(
-        text,
-        style: CustomTextStyles.labelLargeGray5002,
-      ),
     );
   }
 
@@ -243,7 +158,7 @@ class ReservasiScreen extends StatelessWidget {
                                           appTheme.black900.withOpacity(0.34),
                                       spreadRadius: 2.h,
                                       blurRadius: 2.h,
-                                      offset: Offset(0, 1.5),
+                                      offset: const Offset(0, 1.5),
                                     ),
                                   ],
                                 ),
@@ -272,13 +187,16 @@ class ReservasiScreen extends StatelessWidget {
                                                       .selectedDatesFromCalendar ??
                                                   DateTime.now(),
                                               locale: 'en_US',
-                                              headerProps: EasyHeaderProps(
-                                                  selectedDateFormat:
-                                                      SelectedDateFormat
-                                                          .fullDateDMY,
-                                                  monthPickerType:
-                                                      MonthPickerType.switcher,
-                                                  showHeader: false),
+                                              headerProps:
+                                                  const EasyHeaderProps(
+                                                      // ignore: deprecated_member_use
+                                                      selectedDateFormat:
+                                                          SelectedDateFormat
+                                                              .fullDateDMY,
+                                                      monthPickerType:
+                                                          MonthPickerType
+                                                              .switcher,
+                                                      showHeader: false),
                                               dayProps: EasyDayProps(
                                                 width: 48.h,
                                                 height: 70.v,
@@ -476,7 +394,7 @@ class ReservasiScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   _buildLegendItem(appTheme.gray80001, "lbl_empty".tr),
-                  Spacer(),
+                  const Spacer(),
                   _buildLegendItem(appTheme.tealA100, "lbl_choose".tr),
                   SizedBox(width: 29.h),
                   _buildLegendItem(theme.colorScheme.onPrimary.withOpacity(1),

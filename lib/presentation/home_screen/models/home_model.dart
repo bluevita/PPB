@@ -12,7 +12,7 @@ class HomeModel extends Equatable {
   final List<ListdoctornameItemModel> listdoctornameItemList;
   final List<ListtitleItemModel> listtitleItemList;
 
-  HomeModel({
+  const HomeModel({
     this.userprofileItemList = const [],
     this.listdoctornameItemList = const [],
     this.listtitleItemList = const [],

@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import '../core/app_export.dart';
 
@@ -6,15 +5,15 @@ LightCodeColors get appTheme => ThemeHelper().themeColor();
 ThemeData get theme => ThemeHelper().themeData();
 
 class ThemeHelper {
-  var _appTheme = PrefUtils().getThemeData();
+  final _appTheme = PrefUtils().getThemeData();
 
   // A map of custom color themes supported by the app
-  Map<String, LightCodeColors> _supportedCustomColor = {
+  final Map<String, LightCodeColors> _supportedCustomColor = {
     'lightCode': LightCodeColors(),
   };
 
   // A map of color schemes supported by the app
-  Map<String, ColorScheme> _supportedColorScheme = {
+  final Map<String, ColorScheme> _supportedColorScheme = {
     'lightCode': ColorSchemes.lightCodeColorScheme,
   };
 
@@ -109,7 +108,7 @@ class TextThemes {
 }
 
 class ColorSchemes {
-  static final lightCodeColorScheme = ColorScheme.light(
+  static const lightCodeColorScheme = ColorScheme.light(
     primary: Color(0XFF353746),
     primaryContainer: Color(0XFFC4C4C4),
     secondaryContainer: Color(0XFF363746),
@@ -122,24 +121,24 @@ class ColorSchemes {
 }
 
 class LightCodeColors {
-  Color get black900 => Color(0XFF000000);
-  Color get blueGray100 => Color(0XFFD9D9D9);
-  Color get blueGray200 => Color(0XFFB6BACD);
-  Color get blueGray400 => Color(0XFF888888);
-  Color get blueGray900 => Color(0XFF252836);
-  Color get blueGray90001 => Color(0XFF333542);
-  Color get blueGray90002 => Color(0XFF34353E);
-  Color get cyan200 => Color(0XFF95E4EC);
-  Color get cyanA400 => Color(0XFF00E8FE);
-  Color get gray100 => Color(0XFFF7F7F7);
-  Color get gray50 => Color(0XFFF9F9F9);
-  Color get gray5001 => Color(0XFFFBFBFB);
-  Color get gray5002 => Color(0XFFF8F8F8);
-  Color get gray600 => Color(0XFF787983);
-  Color get gray800 => Color(0XFF353645);
-  Color get gray80001 => Color(0XFF363740);
-  Color get orange600 => Color(0XFFFF8900);
-  Color get tealA100 => Color(0XFFA1F7FF);
-  Color get whiteA700 => Color(0XFFFDFDFD);
-  Color get yellowA200 => Color(0XFFFFFF00);
+  Color get black900 => const Color(0XFF000000);
+  Color get blueGray100 => const Color(0XFFD9D9D9);
+  Color get blueGray200 => const Color(0XFFB6BACD);
+  Color get blueGray400 => const Color(0XFF888888);
+  Color get blueGray900 => const Color(0XFF252836);
+  Color get blueGray90001 => const Color(0XFF333542);
+  Color get blueGray90002 => const Color(0XFF34353E);
+  Color get cyan200 => const Color(0XFF95E4EC);
+  Color get cyanA400 => const Color(0XFF00E8FE);
+  Color get gray100 => const Color(0XFFF7F7F7);
+  Color get gray50 => const Color(0XFFF9F9F9);
+  Color get gray5001 => const Color(0XFFFBFBFB);
+  Color get gray5002 => const Color(0XFFF8F8F8);
+  Color get gray600 => const Color(0XFF787983);
+  Color get gray800 => const Color(0XFF353645);
+  Color get gray80001 => const Color(0XFF363740);
+  Color get orange600 => const Color(0XFFFF8900);
+  Color get tealA100 => const Color(0XFFA1F7FF);
+  Color get whiteA700 => const Color(0XFFFDFDFD);
+  Color get yellowA200 => const Color(0XFFFFFF00);
 }

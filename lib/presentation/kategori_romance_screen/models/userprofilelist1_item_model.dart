@@ -15,12 +15,12 @@ class Userprofilelist1ItemModel {
     this.description,
     this.id,
   }) {
-    this.blablablablalsa = blablablablalsa ??
+    blablablablalsa = blablablablalsa ??
         "blablablablalsaklsdklskcnkjckdjcl kjskjlxklsklk kn kjlkalksl";
-    this.userImage = userImage ?? ImageConstant.imgRectangle63;
-    this.subheading = subheading ?? "Cinta Subuh";
-    this.description = description ??
+    userImage = userImage ?? ImageConstant.imgRectangle63;
+    subheading = subheading ?? "Cinta Subuh";
+    description = description ??
         "Mahasiswa laki-laki yang jarang salat tepat waktu, jatuh cinta kepada Ratih, perempuan muda cerdas dan relijius.";
-    this.id = id ?? "";
+    id = id ?? "";
   }
 }

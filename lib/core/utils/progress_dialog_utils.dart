@@ -15,7 +15,7 @@ class ProgressDialogUtils {
         barrierDismissible: isCancellable,
         context: NavigatorService.navigatorKey.currentState!.overlay!.context,
         builder: (BuildContext context) {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(
               strokeWidth: 4,
               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),

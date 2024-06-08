@@ -3,7 +3,7 @@ part of 'kategori_action_bloc.dart';
 /// Represents the state of KategoriAction in the application.
 // ignore_for_file: must_be_immutable
 class KategoriActionState extends Equatable {
-  KategoriActionState({this.kategoriActionModelObj});
+  const KategoriActionState({this.kategoriActionModelObj});
 
   final KategoriActionModel? kategoriActionModelObj;
 

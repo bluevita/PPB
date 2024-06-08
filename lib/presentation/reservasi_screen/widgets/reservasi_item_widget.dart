@@ -6,7 +6,8 @@ import '../models/reservasi_item_model.dart';
 class ReservasiItemWidget extends StatelessWidget {
   final ReservasiItemModel reservasiItemModelObj;
 
-  ReservasiItemWidget(this.reservasiItemModelObj, {Key? key}) : super(key: key);
+  const ReservasiItemWidget(this.reservasiItemModelObj, {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

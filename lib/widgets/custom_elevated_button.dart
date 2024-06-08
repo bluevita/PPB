@@ -9,7 +9,7 @@ class CustomElevatedButton extends BaseButton {
   final Widget? leftIcon;
   final Widget? rightIcon;
 
-  CustomElevatedButton({
+  const CustomElevatedButton({
     Key? key,
     this.decoration,
     this.leftIcon,

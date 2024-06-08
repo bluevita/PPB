@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../core/app_export.dart';
 import '../../widgets/app_bar/appbar_title_searchview_one.dart';
 import '../../widgets/app_bar/custom_app_bar.dart';
@@ -14,9 +13,9 @@ class PaymentMethodScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
     return BlocProvider<PaymentMethodBloc>(
       create: (context) => PaymentMethodBloc(
-        PaymentMethodState(paymentMethodModelObj: PaymentMethodModel()),
+        const PaymentMethodState(paymentMethodModelObj: PaymentMethodModel()),
       )..add(PaymentMethodInitialEvent()),
-      child: PaymentMethodScreen(),
+      child: const PaymentMethodScreen(),
     );
   }
 
@@ -199,7 +198,7 @@ class PaymentMethodScreen extends StatelessWidget {
             color: theme.colorScheme.shadow,
             spreadRadius: 2,
             blurRadius: 4,
-            offset: Offset(0, 2),
+            offset: const Offset(0, 2),
           ),
         ],
       ),
@@ -213,7 +212,7 @@ class PaymentMethodScreen extends StatelessWidget {
           ),
           Text(
             label,
-            style: theme.textTheme.bodyText1,
+            style: theme.textTheme.bodyLarge,
           ),
         ],
       ),
