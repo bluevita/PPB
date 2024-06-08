@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import '../core/app_export.dart';
 import '../presentation/add_movie_screen/add_movie_screen.dart';
 import '../presentation/app_navigation_screen/app_navigation_screen.dart';
