@@ -1,7 +1,4 @@
 // ignore_for_file: avoid_web_libraries_in_flutter
-
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import '../core/app_export.dart';
 
@@ -130,8 +127,7 @@ class CustomSearchView extends StatelessWidget {
               top: 7.v,
               bottom: 7.v,
             ),
-        fillColor: fillColor ??
-            Theme.of(context as BuildContext).colorScheme.secondaryContainer,
+        fillColor: fillColor ?? theme.colorScheme.secondaryContainer,
         filled: filled,
         border: borderDecoration ??
             OutlineInputBorder(
