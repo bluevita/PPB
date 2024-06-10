@@ -1,7 +1,5 @@
 // ignore_for_file: avoid_web_libraries_in_flutter
 
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import '../core/app_export.dart';
@@ -43,11 +41,8 @@ class CustomRatingBar extends StatelessWidget {
         direction: Axis.horizontal,
         allowHalfRating: false,
         itemSize: itemSize ?? 9.0, // Use a default value for itemSize
-        unratedColor: unselectedColor ??
-            Theme.of(context as BuildContext)
-                .colorScheme
-                .onPrimary
-                .withOpacity(0.5),
+        unratedColor:
+            unselectedColor ?? theme.colorScheme.onPrimary.withOpacity(0.5),
         itemCount: itemCount ?? 5,
         updateOnDrag: true,
         itemBuilder: (context, _) {
